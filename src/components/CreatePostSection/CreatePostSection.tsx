@@ -1,8 +1,6 @@
 import React from 'react';
 import Avatar from '../Avatar';
 
-// type Props = {};
-
 function CreatePostSection() {
   return (
     <div className='w-full flex justify-between items-center border border-[#424242] rounded-md bg-[#242424] px-2 py-1 mb-4'>

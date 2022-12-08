@@ -41,7 +41,7 @@ function Post() {
         </svg>
       </div>
       <div className='flex flex-col w-full'>
-        <div className='flex flex-row p-1 pl-2'>
+        <div className='flex flex-row items-center p-1 pl-2'>
           <span className='text-sm font-semibold pr-1 text-[#b6b6b6]'>
             MONSTER
           </span>

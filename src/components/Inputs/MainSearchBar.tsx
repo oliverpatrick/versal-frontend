@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDebouncedValue } from '../../hooks/useDebounced';
 
 function MainSearchBar() {
+  const [value, setValue] = useState('');
+  const [debounced] = useDebouncedValue(value, 200);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(debounced);
+  };
+
   return (
-    <form className='flex items-center h-auto mx-4 flex-grow min-w-0 '>
-      <label htmlFor='simple-search' className='sr-only'>
+    <form
+      className='flex items-center h-auto mx-4 flex-grow min-w-0'
+      onSubmit={handleSubmit}
+    >
+      <label htmlFor='nav-search' className='sr-only'>
         Search
       </label>
       <div className='relative w-full'>
@@ -24,10 +36,12 @@ function MainSearchBar() {
         </div>
         <input
           type='text'
-          id='simple-search'
+          id='nav-search'
           className='flex flex-grow outline-none border border-transparent hover:border-[#7e7e7e] bg-[#313131] placeholder:text-[#7a7a7a] text-sm rounded-3xl w-full pl-10 p-2 focus:rounded-b-none'
           placeholder='Search Versal'
           required
+          value={value}
+          onChange={(event) => setValue(event.currentTarget.value)}
         />
       </div>
     </form>
