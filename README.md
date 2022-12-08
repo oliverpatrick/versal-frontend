@@ -1,0 +1,3 @@
+**EXAMPLE**
+
+![image](./redditrip.JPG)
