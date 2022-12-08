@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Avatar({ width, height }: any) {
+function Avatar({ width, height }: { width: number; height: number }) {
   return (
     <div
       className={`flex-shrink-0 overflow-hidden relative w-${width} h-${height} bg-gray-100 rounded-full dark:bg-gray-600 m-2`}

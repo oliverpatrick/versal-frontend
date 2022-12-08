@@ -12,8 +12,6 @@ type Props = {
 };
 
 function Navbar({ user }: Props) {
-  console.log(user);
-
   return (
     <header className='z-10 w-full fixed flex-grow box-border px-5 h-12 bg-[#242424] inline-flex justify-between items-center border border-[#424242]'>
       <div className='flex flex-row flex-grow items-center justify-between'>

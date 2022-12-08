@@ -11,7 +11,6 @@ export default function useClickOutside(initialIsVisible: boolean) {
   };
 
   const handleClickOutside = (event: any) => {
-    console.log('clicked outside');
     if (ref.current && !ref.current.contains(event.target)) {
       setIsOpen(false);
     }
